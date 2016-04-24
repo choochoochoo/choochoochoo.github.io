@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="50" y1="100" x2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1d9049"/>
+      <stop offset="1" stop-color="#27c942"/>
+    </linearGradient>
+  </defs>
+  <rect class="cls-1" width="100" height="100"/>
+  <path id="Shape_5_copy" data-name="Shape 5 copy" class="cls-2" d="M316,140.886c0,3.767-.957,6.033-3,8.114-1.888,1.922-4.97,3-9,3H285v-6.5a6.5,6.5,0,0,0,0-12V116h4v4h5v-8H271v8h5v-4h4v17.5a6.5,6.5,0,0,0,0,12V152H248V138h4v-4h-4V120h18V107h33v13h5c3.1,0.079,4.864.569,6.824,2.036a9.378,9.378,0,0,1,3.832,7.93A8.07,8.07,0,0,1,313,135,7.5,7.5,0,0,1,316,140.886ZM267,125v9h-5v-9h-9v4h4v14h-4v4h9v-9h5v9h9v-4h-4V129h4v-4h-9Zm40,10a5.667,5.667,0,0,0,3.015-4.779c0-2.853-2.46-5.164-6.015-5.221H289v4h4v14h-4v4s21.44,0,16.026,0a6.145,6.145,0,0,0,5.984-6.3A6.339,6.339,0,0,0,307,135Zm-4,8h-5v-5h5a2,2,0,0,1,2,2v1A2,2,0,0,1,303,143Zm-1-9h-4v-5h4a2,2,0,0,1,2,2v1A2,2,0,0,1,302,134Zm-23,2.5a1.5,1.5,0,1,1,1.5,1.5A1.5,1.5,0,0,1,279,136.5Z" transform="translate(-231 -80)"/>
+</svg>
