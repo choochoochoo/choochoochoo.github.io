@@ -15,10 +15,7 @@ var app = {
             dateProgramNow,
             dateProgramNext,
             channelItemProgram;
-
-        now = new Date;
-        now.setHours(21);
-
+        
         for (i = 0; i < channelItems.length; i++) {
 
             programmTimes = channelItems[i].
