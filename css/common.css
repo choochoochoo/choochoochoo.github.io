@@ -1,0 +1,202 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 18px;
+    line-height: 24px;
+    min-width: 300px;
+}
+
+.header-photo {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    height: 80vh;
+    margin-top: 10vh;
+    margin-bottom: 8vh;
+    color: #fff;
+}
+
+.header-photo__text {
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.header-photo__text-header {
+    display: table-row;
+    vertical-align: middle;
+    height: 80%;
+}
+
+.header-photo__text-header-group {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.header-photo__text-header-big {
+    font-size: 1.2em;
+    line-height: 2em;
+    letter-spacing: 0.4em;
+}
+
+.header-photo__text-header-big_title {
+    font-size: 3em;
+    line-height: 2em;
+    font-weight: bold;
+    letter-spacing: 0.5em;
+}
+
+.header-photo__text-header-small {
+    font-size: 0.7em;
+    line-height: 1em;
+    letter-spacing: 0.5em;
+}
+
+.header-photo__text-subscription {
+    display: table-row;
+    font-size: 0.8em;
+}
+
+.header-photo__text-subscription-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.header-photo__text-subscription-link{
+    color: #fff;
+}
+
+.header-photo_picture_section-1-faroe {
+    background-image: url(../images/section-1-faroe.jpeg);
+    margin-top: 0vh;
+    /*background-position: -200px 0;*/
+}
+
+.header-photo_picture_section-2-flight-and-road {
+    background-image: url(../images/section-2-flight-and-road.jpeg);
+    /*background-position: -200px 0;*/
+}
+
+.header-photo_picture_section-3-weather {
+    background-image: url(../images/section-3-weather.jpeg);
+    /*background-position: -200px 0;*/
+}
+
+.section-text{
+    max-width: 1000px;
+    margin: 0 auto !important;
+    position: relative;
+}
+
+.comment {
+    font-size: 0.8em;
+    line-height: 1.3em;
+    border-left: 5px solid #f9f0f0;
+    max-width: 400px;
+    width: 35%;
+    margin: 0 auto;
+    float: right;
+    clear: both;
+    position: absolute;
+    right: 0px;
+}
+
+.comment_bottom{
+    bottom: 0px;
+}
+
+.comment_important {
+    border-left: 5px solid #e2e2e2;
+    font-weight: bold;
+}
+
+.comment__text {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.main-text {
+    width: 55%;
+    max-width: 600px;
+    margin-left: 40px;
+    margin-right: 10%;
+}
+
+.main-text__dropcap {
+    color: #000;
+    font-size: 3.5em;
+    font-weight: bold;
+}
+
+.main-text__paragraph {
+    margin-top: 5vh;
+}
+
+
+/*
+    НЕ получится использовать модификаторы получается по бем ибо тока через js
+*/
+@media screen and (max-width: 1280px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+    .comment {
+        max-width: 360px;
+        margin: auto;
+        float: none;
+        clear: none;
+        position: static;
+    }
+
+    .main-text {
+        width: 100%;
+        margin: 5% auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-text__paragraph{
+        margin-top: 5vh;
+        margin-left: 5%;
+        margin-right: 5%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .comment {
+        margin-top: 8vh;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 100%;
+    }
+
+    .main-text__paragraph{
+        margin-top: 8vh;
+    }
+
+    .header-photo__text-header-big_title{
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+}
