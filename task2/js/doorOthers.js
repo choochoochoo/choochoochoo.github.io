@@ -62,12 +62,59 @@ Door0.prototype.constructor = DoorBase;
 function Door1(number, onUnlock) {
     DoorBase.apply(this, arguments);
 
-    // ==== Напишите свой код для открытия второй двери здесь ====
-    // Для примера дверь откроется просто по клику на неё
-    this.popup.addEventListener('click', function() {
-        this.unlock();
-    }.bind(this));
-    // ==== END Напишите свой код для открытия второй двери здесь ====
+    // // ==== Напишите свой код для открытия второй двери здесь ====
+    // // Для примера дверь откроется просто по клику на неё
+    // this.popup.addEventListener('click', function() {
+    //     this.unlock();
+    // }.bind(this));
+    // // ==== END Напишите свой код для открытия второй двери здесь ====
+
+
+    var appContainer = document.querySelector('.app.container');
+
+
+
+    var wood = this.popup.querySelector('.door-riddle__wood');
+    wood.addEventListener('pointerdown', _onButtonPointerDown.bind(this));
+    wood.addEventListener('pointerup', _onButtonPointerUp.bind(this));
+    wood.addEventListener('pointercancel', _onButtonPointerUp.bind(this));
+    wood.addEventListener('pointerleave', _onButtonPointerLeave.bind(this));
+
+    wood.addEventListener('pointermove', _onButtonPointerMove.bind(this));
+
+
+
+    function _onButtonPointerDown(event) {
+
+        console.log('pointerdown')
+
+
+        event.target.classList.add('door-riddle__wood_captured');
+
+    }
+
+    function _onButtonPointerUp(event) {
+        event.target.classList.remove('door-riddle__wood_captured');
+        console.log('pointerup')
+    }
+
+    function _onButtonPointerLeave(event) {
+        event.target.classList.remove('door-riddle__wood_captured');
+        console.log('pointerleave')
+    }
+
+    function _onButtonPointerMove(event) {
+
+        if (event.target.classList.contains('door-riddle__wood_captured')) {
+
+            wood.style.left = event.x - appContainer.offsetLeft - 140 + 'px';
+        }
+
+
+
+    }
+
+
 }
 Door1.prototype = Object.create(DoorBase.prototype);
 Door1.prototype.constructor = DoorBase;
