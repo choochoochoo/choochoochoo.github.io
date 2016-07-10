@@ -197,3 +197,49 @@ body {
     top: 200px;
     left: 50px;
 }
+
+.door-riddle__alarm{
+    width: 64px;
+    height: 64px;
+    border-radius: 64px;
+    background-color: rgba(0, 0, 0, 255);
+    border: 1px solid #fff5ec;
+
+
+    /*transition: background-color .3s;*/
+}
+
+@keyframes my-custom-name {
+    /* from, to = 0%, 100% */
+    from {
+        background-color: rgba(0, 0, 0, 255);
+        width: 64px;
+        height: 64px;
+        box-shadow: 0px 0px 0px 00px rgba(243, 3, 0, 0.65);
+    }
+    to {
+        background-color: #f30300 ;
+        width: 96px;
+        height: 96px;
+        box-shadow: 0px 0px 30px 30px rgba(243, 3, 0, 0.65);
+    }
+}
+
+.door-riddle__alarm_pressed
+{
+
+    /* вызов анимации по имени */
+    animation-name: my-custom-name;
+
+    /* параметр: продолжительность */
+    animation-duration: 0.75s;
+
+    /* параметр: количество итераций */
+    /* бесконечно: infinite */
+    animation-iteration-count: infinite;
+
+    /* параметр: анимаировать ли
+    в обратную сторону */
+    animation-direction: alternate;
+
+}

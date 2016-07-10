@@ -75,6 +75,7 @@ function Door1(number, onUnlock) {
 
 
     var wood = this.popup.querySelector('.door-riddle__wood');
+
     wood.addEventListener('pointerdown', _onButtonPointerDown.bind(this));
     wood.addEventListener('pointerup', _onButtonPointerUp.bind(this));
     wood.addEventListener('pointercancel', _onButtonPointerUp.bind(this));
@@ -114,6 +115,60 @@ function Door1(number, onUnlock) {
 
     }
 
+
+
+    var alarm = this.popup.querySelector('.door-riddle__alarm');
+
+    alarm.addEventListener('pointerdown', _onButtonPointerDownAlarm.bind(this));
+    alarm.addEventListener('pointerup', _onButtonPointerUpAlarm.bind(this));
+    alarm.addEventListener('pointercancel', _onButtonPointerUpAlarm.bind(this));
+    alarm.addEventListener('pointerleave', _onButtonPointerUpAlarm.bind(this));
+
+    function _onButtonPointerDownAlarm(e) {
+
+    }
+
+    function _onButtonPointerUpAlarm(e) {
+
+    }
+
+
+
+
+    var buttons = [
+        this.popup.querySelector('.door-riddle__button_0'),
+        this.popup.querySelector('.door-riddle__button_1')
+    ];
+
+
+    buttons.forEach(function(b) {
+        b.addEventListener('pointerdown', _onButtonPointerDownButton.bind(this));
+        b.addEventListener('pointerup', _onButtonPointerUpButton.bind(this));
+        b.addEventListener('pointercancel', _onButtonPointerUpButton.bind(this));
+        b.addEventListener('pointerleave', _onButtonPointerUpButton.bind(this));
+    }.bind(this));
+
+    function _onButtonPointerDownButton(e) {
+
+        checkConditionButton.apply(this);
+    }
+
+    function _onButtonPointerUpButton(e) {
+        alarm.classList.remove('door-riddle__alarm_pressed');
+    }
+
+    function checkConditionButton() {
+        var isOpened = true;
+        buttons.forEach(function(b) {
+            if (!b.classList.contains('door-riddle__button_pressed')) {
+                isOpened = false;
+            }
+        });
+
+        if(isOpened){
+            alarm.classList.add('door-riddle__alarm_pressed');
+        }
+    }
 
 }
 Door1.prototype = Object.create(DoorBase.prototype);
