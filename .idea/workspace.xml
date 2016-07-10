@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c72e62d-2fa1-45de-ad6c-a00e78dffb5e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task2/css/app.css" afterPath="$PROJECT_DIR$/task2/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task2/index.html" afterPath="$PROJECT_DIR$/task2/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task2/js/doorOthers.js" afterPath="$PROJECT_DIR$/task2/js/doorOthers.js" />
     </list>
     <ignored path="choochoochoo.github.io.iws" />
@@ -24,52 +22,7 @@
     <favorites_list name="choochoochoo.github.io" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task2/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="27" column="36" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task2/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="542">
-              <caret line="36" column="81" selection-start-line="36" selection-start-column="81" selection-end-line="36" selection-end-column="81" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="doorOthers.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/task2/js/doorOthers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="168" column="31" selection-start-line="168" selection-start-column="31" selection-end-line="168" selection-end-column="31" />
-              <folding>
-                <element signature="n#!!doc;n#Door0#0" expanded="false" />
-                <element signature="n#!!block;n#Door2#0" expanded="false" />
-                <element signature="n#!!block;n#Box#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task2/css/app.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="208" column="27" selection-start-line="208" selection-start-column="27" selection-end-line="208" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -271,16 +224,16 @@
       <workItem from="1468005988603" duration="541000" />
       <workItem from="1468089054173" duration="3630000" />
       <workItem from="1468141161677" duration="5000" />
-      <workItem from="1468161485973" duration="12175000" />
+      <workItem from="1468161485973" duration="12399000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21344000" />
+    <option name="totallyTimeSpent" value="21568000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1984375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -446,14 +399,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task2/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="36" column="81" selection-start-line="36" selection-start-column="81" selection-end-line="36" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task2/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -464,13 +409,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/task2/js/doorOthers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="168" column="31" selection-start-line="168" selection-start-column="31" selection-end-line="168" selection-end-column="31" />
+        <state relative-caret-position="89">
+          <caret line="146" column="81" selection-start-line="146" selection-start-column="81" selection-end-line="146" selection-end-column="81" />
           <folding>
             <element signature="n#!!doc;n#Door0#0" expanded="false" />
             <element signature="n#!!block;n#Door2#0" expanded="false" />
             <element signature="n#!!block;n#Box#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="36" column="81" selection-start-line="36" selection-start-column="81" selection-end-line="36" selection-end-column="81" />
+          <folding />
         </state>
       </provider>
     </entry>

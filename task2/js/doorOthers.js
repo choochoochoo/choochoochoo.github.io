@@ -149,11 +149,12 @@ function Door1(number, onUnlock) {
     }.bind(this));
 
     function _onButtonPointerDownButton(e) {
-
+        e.target.classList.add('door-riddle__button_pressed');
         checkConditionButton.apply(this);
     }
 
     function _onButtonPointerUpButton(e) {
+        e.target.classList.remove('door-riddle__button_pressed');
         alarm.classList.remove('door-riddle__alarm_pressed');
     }
 
