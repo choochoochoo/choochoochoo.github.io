@@ -33,7 +33,7 @@ function Door1(number, onUnlock) {
     var appContainer = document.querySelector('.app.container');
 
 
-    var woodWrapper = this.popup.querySelector('.door-riddle__wood-wrap');
+    var woodWrapper = this.popup.querySelector('.door-riddle__wood-buttons-wrap');
     var wood = this.popup.querySelector('.door-riddle__wood');
     var woodButton = this.popup.querySelector('.door-riddle__wood-button');
 
