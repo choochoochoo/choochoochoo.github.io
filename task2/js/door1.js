@@ -111,7 +111,7 @@ function Door1(number, onUnlock) {
 
         if (isOpened) {
             alarm.classList.add('door-riddle__alarm_pressed');
-            woodWrapper.classList.add('door-riddle__wood-button_visible');
+            woodWrapper.classList.add('door-riddle__wood-buttons-wrap_visible');
         }
     }
 
