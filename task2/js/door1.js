@@ -98,7 +98,7 @@ function Door1(number, onUnlock) {
     function _onButtonPointerUpButton(e) {
         e.target.classList.remove('door-riddle__button_pressed');
         alarm.classList.remove('door-riddle__alarm_pressed');
-        woodWrapper.classList.remove('door-riddle__wood-button_visible');
+        woodWrapper.classList.remove('door-riddle__wood-buttons-wrap_visible');
     }
 
     function checkConditionButton() {
