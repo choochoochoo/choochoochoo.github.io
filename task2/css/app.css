@@ -228,7 +228,7 @@ body {
 }
 
 
-.door-riddle__wood-button-wrap{
+.door-riddle__wood-buttons-wrap{
     flex-direction: row;
     justify-content: space-between;
     display: none;
@@ -263,14 +263,10 @@ body {
     /* from, to = 0%, 100% */
     from {
         background-color: rgba(0, 0, 0, 255);
-        width: 64px;
-        height: 64px;
         box-shadow: 0px 0px 0px 00px rgba(243, 3, 0, 0.65);
     }
     to {
         background-color: #f30300 ;
-        width: 96px;
-        height: 96px;
         box-shadow: 0px 0px 30px 30px rgba(243, 3, 0, 0.65);
     }
 }
