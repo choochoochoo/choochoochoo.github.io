@@ -55,45 +55,6 @@ Door0.prototype.constructor = DoorBase;
 
 
 
-/**
- * @class Door2
- * @augments DoorBase
- * @param {Number} number
- * @param {Function} onUnlock
- */
-function Door2(number, onUnlock) {
-    DoorBase.apply(this, arguments);
 
-    // ==== Напишите свой код для открытия третей двери здесь ====
-    // Для примера дверь откроется просто по клику на неё
-    this.popup.addEventListener('click', function() {
-        this.unlock();
-    }.bind(this));
-    // ==== END Напишите свой код для открытия третей двери здесь ====
-}
-Door2.prototype = Object.create(DoorBase.prototype);
-Door2.prototype.constructor = DoorBase;
 
-/**
- * Сундук
- * @class Box
- * @augments DoorBase
- * @param {Number} number
- * @param {Function} onUnlock
- */
-function Box(number, onUnlock) {
-    DoorBase.apply(this, arguments);
 
-    // ==== Напишите свой код для открытия сундука здесь ====
-    // Для примера сундук откроется просто по клику на него
-    this.popup.addEventListener('click', function() {
-        this.unlock();
-    }.bind(this));
-    // ==== END Напишите свой код для открытия сундука здесь ====
-
-    this.showCongratulations = function() {
-        alert('Поздравляю! Игра пройдена!');
-    };
-}
-Box.prototype = Object.create(DoorBase.prototype);
-Box.prototype.constructor = DoorBase;
