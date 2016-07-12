@@ -38,22 +38,33 @@ function Door1(number, onUnlock) {
         conditionTarget.call(this, event);
     }
 
+    function _onButtonPointerMove(event) {
+        if (event.target.classList.contains('door-riddle__wood-button_captured')) {
+        //    var positionWood = App.Helper.getPosition(wood);
+         //   woodButton.style.left = event.x - positionWood.x - mouseOffset.x + 'px';
+        }
+    }
+
+
     function conditionTarget(event) {
 
         if (event.relatedTarget && event.relatedTarget.classList.contains('door-riddle__wood-button-target')) {
-            this.unlock();
+            //this.unlock();
+
+            woodButton.classList.add('door-riddle__wood-button_right');
+
+            alert('win')
+
             return;
         }
 
-        woodButton.style.left = '0px';
+       // woodButton.style.left = '0px';
     }
 
-    function _onButtonPointerMove(event) {
-        if (event.target.classList.contains('door-riddle__wood-button_captured')) {
-            var positionWood = App.Helper.getPosition(wood);
-            woodButton.style.left = event.x - positionWood.x - mouseOffset.x + 'px';
-        }
-    }
+
+
+
+
 
     var alarm = this.popup.querySelector('.door-riddle__alarm');
 
@@ -78,7 +89,7 @@ function Door1(number, onUnlock) {
     function _onButtonPointerUpButton(e) {
         e.target.classList.remove('door-riddle__button_pressed');
         alarm.classList.remove('door-riddle__alarm_pressed');
-        woodWrapper.classList.remove('door-riddle__wood-buttons-wrap_visible');
+      //  woodWrapper.classList.remove('door-riddle__wood-buttons-wrap_visible');
     }
 
     function checkConditionButton() {
