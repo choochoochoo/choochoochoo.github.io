@@ -114,7 +114,7 @@ body {
     bottom: 0;
     top: 0;
 
-    background-color: rgba(0,0,0,.3);
+    background-color: rgba(0, 0, 0, .3);
     transition: opacity .3s;
 
     display: flex;
@@ -158,6 +158,7 @@ body {
 .popup__content_level_2 {
     /* Можно поставить какую-нибудь свою картинку двери на бек */
 }
+
 .popup__content_level_3 {
     background-image: url(../img/door__box.png);
     background-size: contain;
@@ -193,12 +194,12 @@ body {
     background-color: #F3E5D9;
 }
 
-.door-riddle__wood-wrap{
+.door-riddle__wood-wrap {
     width: 100%;
 }
 
 /* my classes*/
-.door-riddle__wood{
+.door-riddle__wood {
     /*background-image: url(../img/wood.jpg);*/
     /*background-size: contain;*/
     /*background-repeat: no-repeat;*/
@@ -215,7 +216,7 @@ body {
 
 }
 
-.door-riddle__wood-button{
+.door-riddle__wood-button {
     width: 46px;
     height: 46px;
     border-radius: 52px;
@@ -227,18 +228,17 @@ body {
     margin-left: 8px;
 }
 
-
-.door-riddle__wood-buttons-wrap{
+.door-riddle__wood-buttons-wrap {
     flex-direction: row;
     justify-content: space-between;
     display: none;
 }
 
-.door-riddle__wood-buttons-wrap_visible{
+.door-riddle__wood-buttons-wrap_visible {
     display: flex;
 }
 
-.door-riddle__wood-button-target{
+.door-riddle__wood-button-target {
     height: 58px;
     width: 58px;
     right: 1px;
@@ -248,13 +248,12 @@ body {
     border-radius: 64px;
 }
 
-.door-riddle__alarm{
+.door-riddle__alarm {
     width: 64px;
     height: 64px;
     border-radius: 64px;
     background-color: rgba(0, 0, 0, 255);
     border: 1px solid #fff5ec;
-
 
     /*transition: background-color .3s;*/
 }
@@ -266,13 +265,12 @@ body {
         box-shadow: 0px 0px 0px 00px rgba(243, 3, 0, 0.65);
     }
     to {
-        background-color: #f30300 ;
+        background-color: #f30300;
         box-shadow: 0px 0px 30px 30px rgba(243, 3, 0, 0.65);
     }
 }
 
-.door-riddle__alarm_pressed
-{
+.door-riddle__alarm_pressed {
 
     /* вызов анимации по имени */
     animation-name: alarm-animation;
@@ -289,3 +287,50 @@ body {
     animation-direction: alternate;
 
 }
+
+.door-riddle__circle1 {
+    height: 300px;
+    width: 300px;
+    border-radius: 300px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+}
+
+.door-riddle__circle0 {
+    height: 320px;
+    width: 320px;
+    border-radius: 300px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+}
+
+.door-riddle__circle2 {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+
+    background-color: white;
+    position: relative;
+}
+
+.door-riddle2__button {
+    width: 64px;
+    height: 64px;
+    border-radius: 64px;
+    background-color: #583319;
+    border: 1px solid #F3E9E0;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .4);
+    transition: background-color .3s;
+    position: relative;
+}
+
+/*box*/
+
