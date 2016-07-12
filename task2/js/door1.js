@@ -9,26 +9,6 @@ function Door1(number, onUnlock) {
 
     var mouseOffset;
 
-    function getPosition(e) {
-        var left = 0;
-        var top = 0;
-
-        while (e.offsetParent) {
-            left += e.offsetLeft;
-            top += e.offsetTop;
-            e = e.offsetParent;
-        }
-
-        left += e.offsetLeft;
-        top += e.offsetTop;
-
-        return {x: left, y: top}
-    }
-
-    function getMouseOffset(target, e) {
-        var docPos = getPosition(target);
-        return {x: e.pageX - docPos.x, y: e.pageY - docPos.y};
-    }
 
     var appContainer = document.querySelector('.app.container');
 
@@ -48,7 +28,7 @@ function Door1(number, onUnlock) {
         console.log('pointerdown')
         event.target.classList.add('door-riddle__wood-button_captured');
 
-        mouseOffset = getMouseOffset(event.target, event);
+        mouseOffset = App.Helper.getMouseOffset(event.target, event);
     }
 
     function _onButtonPointerUp(event) {
@@ -70,7 +50,7 @@ function Door1(number, onUnlock) {
 
     function _onButtonPointerMove(event) {
         if (event.target.classList.contains('door-riddle__wood-button_captured')) {
-            var positionWood = getPosition(wood);
+            var positionWood = App.Helper.getPosition(wood);
             woodButton.style.left = event.x - positionWood.x - mouseOffset.x + 'px';
         }
     }
