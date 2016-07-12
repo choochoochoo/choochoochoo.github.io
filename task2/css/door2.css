@@ -1,0 +1,32 @@
+
+.door-riddle__circle1 {
+    height: 300px;
+    width: 300px;
+    border-radius: 300px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+}
+
+.door-riddle__circle2 {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+
+    background-color: white;
+    position: relative;
+}
+
+.door-riddle2__button {
+    width: 64px;
+    height: 64px;
+    border-radius: 64px;
+    background-color: #583319;
+    border: 1px solid #F3E9E0;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .4);
+    transition: background-color .3s;
+    position: relative;
+}
