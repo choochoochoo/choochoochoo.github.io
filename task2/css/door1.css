@@ -1,0 +1,65 @@
+.door1-riddle {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.door1-riddle__button {
+    width: 64px;
+    height: 64px;
+    border-radius: 64px;
+    background-color: #583319;
+    border: 1px solid #F3E9E0;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .4);
+
+    transition: background-color .3s;
+}
+
+.door1-riddle__button_pressed {
+    background-color: #F3E5D9;
+}
+
+.door1-riddle__alarm {
+    width: 64px;
+    height: 64px;
+    border-radius: 64px;
+    background-color: rgba(0, 0, 0, 255);
+    border: 1px solid #fff5ec;
+}
+
+@keyframes door1-riddle__alarm-animation {
+    from {
+        background-color: rgba(0, 0, 0, 255);
+        box-shadow: 0px 0px 0px 00px rgba(243, 3, 0, 0.65);
+    }
+    to {
+        background-color: #f30300;
+        box-shadow: 0px 0px 30px 30px rgba(243, 3, 0, 0.65);
+    }
+}
+
+.door1-riddle__alarm_active {
+
+    /* вызов анимации по имени */
+    animation-name: door1-riddle__alarm-animation;
+
+    /* параметр: продолжительность */
+    animation-duration: 0.75s;
+
+    /* параметр: количество итераций */
+    /* бесконечно: infinite */
+    animation-iteration-count: infinite;
+
+    /* параметр: анимаировать ли
+    в обратную сторону */
+    animation-direction: alternate;
+
+}
+
+.door1-riddle__slider-wrap{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
