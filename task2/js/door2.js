@@ -15,12 +15,12 @@ function Door2(number, onUnlock) {
     var result = 0;
 
     var circle1 = this.popup.querySelector('.door2-riddle__circle1');
-    var circle2 = this.popup.querySelector('.door2-riddle__circle2');
+    var button = this.popup.querySelector('.door2-riddle__button');
     var monitor = this.popup.querySelector('.door2-riddle-monitor');
 
     // test
-    //var circle3 = this.popup.querySelector('.door2-riddle__circle3');
-    // var circle3Pos = AppHelper.getPosition(circle3);
+    //var circle3 = this.popup.querySelector('.door2-riddle__button');
+    //var circle3Pos = AppHelper.getPosition(circle3);
     //centerPointEvent = {pageX: circle3Pos.x, pageY: circle3Pos.y};
 
     circle1.addEventListener('pointerleave', _onCircle1PointerUp.bind(this));
@@ -29,43 +29,54 @@ function Door2(number, onUnlock) {
     circle1.addEventListener('pointerdown', _onCircle1PointerDown.bind(this));
     circle1.addEventListener('pointermove', _onCircle1PointerMove.bind(this));
 
-    function _onCircle1PointerUp(event) {
-        console.log(event.type)
+    button.addEventListener('pointerdown', _onButtonPointerDown.bind(this));
+    button.addEventListener('pointerleave', _onButtonPointerUp.bind(this));
+    button.addEventListener('pointercancel', _onButtonPointerUp.bind(this));
+    button.addEventListener('pointerup', _onButtonPointerUp.bind(this));
 
-        isGestureStarted = false;
-        isFirstClick = false;
+    function _onButtonPointerDown(event) {
+        console.log('circle 2' + event.type )
+        pressButton();
+        centerPointEvent = event;
+        console.log(centerPointEvent)
+    }
+
+    function _onButtonPointerUp(event) {
+        console.log(event.type)
+        unpressButton();
         centerPointEvent = null;
-        endPointEvent = null;
         resetResult();
     }
 
 
+
+
+
     function _onCircle1PointerDown(event) {
-        //if (event.isPrimary) {
-        //    centerPointEvent = event;
-        //    return;
-        //}
 
-        // Первое касание
-        if(!isFirstClick){
-            centerPointEvent = event;
-            isFirstClick = true;
+        if(circle1 === event.target && isPressedButton()){
+            console.log('circle 1' + event.type )
 
-            console.log(centerPointEvent)
-            return;
+            isGestureStarted = true;
+
+            endPointEvent = event;
+
+            thetaDelta = angle(
+                centerPointEvent.pageX,
+                centerPointEvent.pageY,
+                endPointEvent.pageX,
+                endPointEvent.pageY);
+
+            console.log(endPointEvent)
         }
 
-        isGestureStarted = true;
+    }
 
-        endPointEvent = event;
-
-        thetaDelta = angle(
-            centerPointEvent.pageX,
-            centerPointEvent.pageY,
-            endPointEvent.pageX,
-            endPointEvent.pageY);
-
-        console.log(endPointEvent)
+    function _onCircle1PointerUp(event) {
+        console.log(event.type)
+        isGestureStarted = false;
+        endPointEvent = null;
+        resetResult();
     }
 
     function _onCircle1PointerMove(event) {
@@ -145,6 +156,22 @@ function Door2(number, onUnlock) {
         }
 
         return result;
+    }
+
+    function pressButton(){
+        button.classList.add('door2-riddle__button_pressed');
+    }
+
+    function unpressButton(){
+        button.classList.remove('door2-riddle__button_pressed');
+    }
+
+    function isPressedButton() {
+        if (button.classList.contains('door2-riddle__button_pressed')) {
+            return true;
+        }
+
+        return false;
     }
 }
 

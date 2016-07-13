@@ -22,12 +22,18 @@
 
 }
 
-.door2-riddle__circle2 {
+.door2-riddle__button {
     height: 100px;
     width: 100px;
     border-radius: 50px;
-    background-color: red;
+    background-color: white;
     position: relative;
+
+}
+
+.door2-riddle__button_pressed{
+    background-color: red;
+    transition: background-color .3s;
 }
 
 .door2-riddle__circle3 {
