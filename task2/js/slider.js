@@ -6,12 +6,12 @@ function Slider(el, door) {
     var isGestureStarted = false;
     var doorOwner = door;
 
-    sliderButton.addEventListener('pointerdown', onPointerDown);
-    sliderButton.addEventListener('pointermove', onPointerMove);
+    containerSlider.addEventListener('pointerdown', onPointerDown);
+    containerSlider.addEventListener('pointermove', onPointerMove);
 
-    sliderButton.addEventListener('pointerup', onPointerUp);
-    sliderButton.addEventListener('pointercancel', onPointerUp);
-    sliderButton.addEventListener('pointerleave', onPointerUp);
+    containerSlider.addEventListener('pointerup', onPointerUp);
+    containerSlider.addEventListener('pointercancel', onPointerUp);
+    containerSlider.addEventListener('pointerleave', onPointerUp);
 
     function onPointerDown(event) {
 
