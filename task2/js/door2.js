@@ -52,6 +52,8 @@ function Door2(number, onUnlock) {
         if(!isGestureStarted){
             centerPointEvent = event;
             isGestureStarted = true;
+
+            console.log(centerPointEvent)
             return;
         }
 
@@ -65,7 +67,6 @@ function Door2(number, onUnlock) {
             endPointEvent.pageX,
             endPointEvent.pageY);
 
-        console.log(centerPointEvent)
         console.log(endPointEvent)
     }
 
