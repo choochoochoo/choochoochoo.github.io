@@ -17,10 +17,8 @@ function Slider(el, door) {
 
         currentPosition = startPosition = event.pageX;
         isGestureStarted = true;
-
-        captureButton();
-
-        containerSlider.setPointerCapture(event.pointerId);
+        
+        //containerSlider.setPointerCapture(event.pointerId);
 
         disableTransition();
     }
@@ -36,8 +34,10 @@ function Slider(el, door) {
 
     function onPointerUp(event) {
 
+        console.log(event.type)
+
         currentPosition = event.pageX;
-        isGestureStarted = false;
+
 
         //if(event.pointerId){
         //    sliderButton.releasePointerCapture(event.pointerId);
@@ -45,14 +45,14 @@ function Slider(el, door) {
 
         enableTransition();
 
-        if (currentPosition - startPosition > 100 && isCaptureButton()) {
+        if (currentPosition - startPosition > 100 && isGestureStarted) {
             doorOwner.unlock();
 
         } else {
             resetPosition();
         }
 
-        releaseButton();
+        isGestureStarted = false;
     }
 
     function updatePosition() {
@@ -83,22 +83,6 @@ function Slider(el, door) {
 
     function enableTransition() {
         sliderButton.style.transition = '';
-    }
-
-    function captureButton() {
-        sliderButton.classList.add('slider__button_captured');
-    }
-
-    function releaseButton() {
-        sliderButton.classList.remove('slider__button_captured');
-    }
-
-    function isCaptureButton() {
-        if(sliderButton.classList.contains('slider__button_captured')) {
-            return true;
-        }
-
-        return false;
     }
 
     this.show = function(){
