@@ -15,6 +15,7 @@ function Door2(number, onUnlock) {
 
     var circle1 = this.popup.querySelector('.door-riddle__circle1');
     var circle2 = this.popup.querySelector('.door-riddle__circle2');
+    var monitor = this.popup.querySelector('.door2-riddle-monitor');
 
     // var circle3 = this.popup.querySelector('.door-riddle__circle3');
     // var circle3Pos = AppHelper.getPosition(circle3);
@@ -93,7 +94,7 @@ function Door2(number, onUnlock) {
     }
 
     function writeResult(result) {
-        circle2.innerText = Math.round(result) + '%';
+        monitor.innerText = Math.round(result) + '%';
     }
 
     function isWin(result) {

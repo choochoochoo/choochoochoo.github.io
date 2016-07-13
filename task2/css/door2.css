@@ -1,5 +1,14 @@
 
-.door-riddle__circle1 {
+.door2-riddle {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.door2-riddle__circle1 {
     height: 300px;
     width: 300px;
     border-radius: 300px;
@@ -10,39 +19,28 @@
     flex-direction: column;
     position: relative;
 
-    color: white;
-    font-weight: bold;
-    font-size: 2rem;
+
 }
 
-.door-riddle__circle2 {
+.door2-riddle__circle2 {
     height: 100px;
     width: 100px;
     border-radius: 50px;
     background-color: red;
     position: relative;
 
+
+}
+
+.door2-riddle-monitor{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-around
-}
-
-.door-riddle__circle3 {
-    height: 1px;
-    width: 1px;
-    border-radius: 100px;
-
+    justify-content: space-around;
     background-color: white;
-    position: relative;
-}
-
-.door-riddle2__button {
-    width: 64px;
-    height: 64px;
-    border-radius: 64px;
-    background-color: #583319;
-    border: 1px solid #F3E9E0;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, .4);
-    transition: background-color .3s;
-    position: relative;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
 }
