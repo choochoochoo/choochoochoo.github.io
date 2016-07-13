@@ -13,8 +13,8 @@ function Door2(number, onUnlock) {
     //var thetaDelta = 0;
     var result = 0;
 
-    var circle1 = this.popup.querySelector('.door-riddle__circle1');
-    var circle2 = this.popup.querySelector('.door-riddle__circle2');
+    var circle1 = this.popup.querySelector('.door2-riddle__circle1');
+    var circle2 = this.popup.querySelector('.door2-riddle__circle2');
     var monitor = this.popup.querySelector('.door2-riddle-monitor');
 
     // var circle3 = this.popup.querySelector('.door-riddle__circle3');
