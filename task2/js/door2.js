@@ -51,10 +51,11 @@ function Door2(number, onUnlock) {
         // Первое касание
         if(!isGestureStarted){
             centerPointEvent = event;
+            isGestureStarted = true;
             return;
         }
 
-        isGestureStarted = true;
+
 
         endPointEvent = event;
 
