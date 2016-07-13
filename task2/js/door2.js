@@ -7,19 +7,18 @@
 function Door2(number, onUnlock) {
     DoorBase.apply(this, arguments);
 
-    var centerPointEvent = {pageX: 0, pageY: 0};
+    var centerPointEvent = null;
     var endPointEvent = null;
-    var endPointEventFirst = null;
     var isGestureStarted = false;
-    var thetaDelta = 0;
+    //var thetaDelta = 0;
     var result = 0;
 
     var circle1 = this.popup.querySelector('.door-riddle__circle1');
     var circle2 = this.popup.querySelector('.door-riddle__circle2');
-    var circle3 = this.popup.querySelector('.door-riddle__circle3');
-    var circle3Pos = AppHelper.getPosition(circle3);
 
-    centerPointEvent = {pageX: circle3Pos.x, pageY: circle3Pos.y};
+    // var circle3 = this.popup.querySelector('.door-riddle__circle3');
+    // var circle3Pos = AppHelper.getPosition(circle3);
+    //centerPointEvent = {pageX: circle3Pos.x, pageY: circle3Pos.y};
 
     circle1.addEventListener('pointerleave', _onCircle1PointerUp.bind(this));
     circle1.addEventListener('pointercancel', _onCircle1PointerUp.bind(this));
@@ -44,16 +43,18 @@ function Door2(number, onUnlock) {
         //    return;
         //}
 
+        // Первое касание
+        if(!isGestureStarted){
+            centerPointEvent = event;
+
+            return;
+        }
+
         isGestureStarted = true;
-        endPointEvent = endPointEventFirst = event;
 
-        thetaDelta = angle(
-            centerPointEvent.pageX,
-            centerPointEvent.pageY,
-            endPointEvent.pageX,
-            endPointEvent.pageY);
+        endPointEvent = event;
 
-        console.log('delta: ' + thetaDelta)
+
     }
 
     function _onCircle1PointerMove(event) {
@@ -116,6 +117,15 @@ function Door2(number, onUnlock) {
     }
 
     function deltaAngle(theta) {
+
+        var thetaDelta = angle(
+            centerPointEvent.pageX,
+            centerPointEvent.pageY,
+            endPointEvent.pageX,
+            endPointEvent.pageY);
+
+        console.log('delta: ' + thetaDelta)
+
         var result = theta - thetaDelta;
 
         if (result < 0) {
