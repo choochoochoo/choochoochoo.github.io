@@ -28,8 +28,13 @@
     border-radius: 50px;
     background-color: red;
     position: relative;
+}
 
-
+.door2-riddle__circle3 {
+    height: 1px;
+    width: 1px;
+    position: relative;
+    background-color: black;
 }
 
 .door2-riddle-monitor{

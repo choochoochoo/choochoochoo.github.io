@@ -10,14 +10,15 @@ function Door2(number, onUnlock) {
     var centerPointEvent = null;
     var endPointEvent = null;
     var isGestureStarted = false;
-    //var thetaDelta = 0;
+    var thetaDelta = 0;
     var result = 0;
 
     var circle1 = this.popup.querySelector('.door2-riddle__circle1');
     var circle2 = this.popup.querySelector('.door2-riddle__circle2');
     var monitor = this.popup.querySelector('.door2-riddle-monitor');
 
-    // var circle3 = this.popup.querySelector('.door-riddle__circle3');
+    // test
+    //var circle3 = this.popup.querySelector('.door2-riddle__circle3');
     // var circle3Pos = AppHelper.getPosition(circle3);
     //centerPointEvent = {pageX: circle3Pos.x, pageY: circle3Pos.y};
 
@@ -55,7 +56,11 @@ function Door2(number, onUnlock) {
 
         endPointEvent = event;
 
-
+        thetaDelta = angle(
+            centerPointEvent.pageX,
+            centerPointEvent.pageY,
+            endPointEvent.pageX,
+            endPointEvent.pageY);
     }
 
     function _onCircle1PointerMove(event) {
@@ -72,6 +77,8 @@ function Door2(number, onUnlock) {
 
             theta = deltaAngle(theta);
 
+         //   console.log(theta)
+
             // не дадим в обратную сторону крутить
             if (isRevers(theta)) {
                 resetResult();
@@ -79,6 +86,8 @@ function Door2(number, onUnlock) {
             }
 
             result = getResult(theta);
+
+            //console.log(result)
 
             writeResult(result);
 
@@ -119,15 +128,11 @@ function Door2(number, onUnlock) {
 
     function deltaAngle(theta) {
 
-        var thetaDelta = angle(
-            centerPointEvent.pageX,
-            centerPointEvent.pageY,
-            endPointEvent.pageX,
-            endPointEvent.pageY);
-
-        console.log('delta: ' + thetaDelta)
+        //console.log('delta: ' + thetaDelta)
 
         var result = theta - thetaDelta;
+
+      //  console.log(result)
 
         if (result < 0) {
             result += 360;
