@@ -31,7 +31,7 @@ function Door1(number, onUnlock) {
     function _onButtonPointerUpButton(event) {
         unpressButton.call(this, event);
         switchOffAlarm();
-       // slider.hide();
+        slider.hide();
     }
 
     function checkConditionButton() {
@@ -44,7 +44,7 @@ function Door1(number, onUnlock) {
 
         if (isOpened) {
             switchOnAlarm();
-           // slider.show();
+            slider.show();
         }
     }
 
