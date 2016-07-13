@@ -1,4 +1,4 @@
-@keyframes animation-ball-0 {
+@keyframes box-riddle-animation-ball-0 {
     from {
         bottom: -100px;
     }
@@ -7,7 +7,7 @@
     }
 }
 
-@keyframes animation-ball-1 {
+@keyframes box-riddle-animation-ball-1 {
     from {
         bottom: -150px;
     }
@@ -16,7 +16,7 @@
     }
 }
 
-@keyframes animation-ball-2 {
+@keyframes box-riddle-animation-ball-2 {
     from {
         bottom: -150px;
     }
@@ -25,7 +25,7 @@
     }
 }
 
-@keyframes animation-ball-3 {
+@keyframes box-riddle-animation-ball-3 {
     from {
         bottom: -250px;
     }
@@ -48,7 +48,7 @@
     animation-direction: alternate;
 }
 
-.box-riddle_ball_killed {
+.box-riddle__ball_killed {
 
     -o-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -62,25 +62,25 @@
     transform: scale(0, 0);
 }
 
-.box-riddle_ball_0 {
+.box-riddle__ball_0 {
     background-color: #f30300;
-    animation-name: animation-ball-0;
+    animation-name: box-riddle-animation-ball-0;
 }
 
-.box-riddle_ball_1 {
+.box-riddle__ball_1 {
     background-color: #17f32d;
     left: 70px;
-    animation-name: animation-ball-1;
+    animation-name: box-riddle-animation-ball-1;
 }
 
-.box-riddle_ball_2 {
+.box-riddle__ball_2 {
     background-color: #f3e862;
     left: 140px;
-    animation-name: animation-ball-2;
+    animation-name: box-riddle-animation-ball-2;
 }
 
-.box-riddle_ball_3 {
+.box-riddle__ball_3 {
     background-color: #002cf3;
     left: 210px;
-    animation-name: animation-ball-3;
+    animation-name: box-riddle-animation-ball-3;
 }

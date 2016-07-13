@@ -8,24 +8,17 @@
 function Box(number, onUnlock) {
     DoorBase.apply(this, arguments);
 
-    //// ==== Напишите свой код для открытия сундука здесь ====
-    //// Для примера сундук откроется просто по клику на него
-    //this.popup.addEventListener('click', function() {
-    //    this.unlock();
-    //}.bind(this));
-    //// ==== END Напишите свой код для открытия сундука здесь ====
-    //
-    //this.showCongratulations = function() {
-    //    alert('Поздравляю! Игра пройдена!');
-    //};
+    this.showCongratulations = function() {
+       alert('Поздравляю! Игра пройдена!');
+    };
 
     var count = 0;
 
     var balls = [
-        this.popup.querySelector('.box-riddle_ball_0'),
-        this.popup.querySelector('.box-riddle_ball_1'),
-        this.popup.querySelector('.box-riddle_ball_2'),
-        this.popup.querySelector('.box-riddle_ball_3')
+        this.popup.querySelector('.box-riddle__ball_0'),
+        this.popup.querySelector('.box-riddle__ball_1'),
+        this.popup.querySelector('.box-riddle__ball_2'),
+        this.popup.querySelector('.box-riddle__ball_3')
     ];
 
     var popupCounter = this.popup.querySelector('.popup__counter');
@@ -35,23 +28,15 @@ function Box(number, onUnlock) {
     }.bind(this));
 
     function _onBallPointerDown(event) {
-
         conditionDoubleTap.call(this, event);
-
-        event.target.classList.add('box-riddle_ball_pressed');
-
-        setTimeout(doubleTap.bind(this, event), 300);
-    }
-
-    function doubleTap(event){
-        console.log('unpress')
-        event.target.classList.remove('box-riddle_ball_pressed');
+        pressBall.call(this, event);
+        setTimeout(unpressBall.bind(this, event), 300);
     }
 
     function conditionDoubleTap(event){
-        if(event.target.classList.contains('box-riddle_ball_pressed')){
-            event.target.classList.add('box-riddle_ball_killed');
-            conditionAllKilled();
+        if(event.target.classList.contains('box-riddle__ball_pressed')){
+            killBall.call(this, event);
+            conditionAllKilled.apply(this);
         }
     }
 
@@ -59,14 +44,26 @@ function Box(number, onUnlock) {
 
         var allKilled = true;
         balls.forEach(function(ball) {
-            if (!ball.classList.contains('box-riddle_ball_killed')) {
+            if (!ball.classList.contains('box-riddle__ball_killed')) {
                 allKilled = false;
             }
         });
 
         if (allKilled) {
-            alert('win')
+            this.unlock();
         }
+    }
+
+    function pressBall(event) {
+        event.target.classList.add('box-riddle__ball_pressed');
+    }
+
+    function unpressBall(event) {
+        event.target.classList.remove('box-riddle__ball_pressed');
+    }
+
+    function killBall(event) {
+        event.target.classList.add('box-riddle__ball_killed');
     }
 }
 Box.prototype = Object.create(DoorBase.prototype);

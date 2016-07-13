@@ -16,7 +16,7 @@ function Door2(number, onUnlock) {
 
     var circle1 = this.popup.querySelector('.door2-riddle__circle1');
     var button = this.popup.querySelector('.door2-riddle__button');
-    var monitor = this.popup.querySelector('.door2-riddle-monitor');
+    var monitor = this.popup.querySelector('.door2-riddle__monitor');
 
     // test
     //var circle3 = this.popup.querySelector('.door2-riddle__button');
@@ -47,10 +47,6 @@ function Door2(number, onUnlock) {
         centerPointEvent = null;
         resetResult();
     }
-
-
-
-
 
     function _onCircle1PointerDown(event) {
 
@@ -108,7 +104,7 @@ function Door2(number, onUnlock) {
             writeResult(result);
 
             if (isWin(result)) {
-                alert('win')
+                this.unlock();
             }
         }
 
