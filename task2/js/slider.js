@@ -20,7 +20,7 @@ function Slider(el, door) {
 
         captureButton();
 
-        sliderButton.setPointerCapture(event.pointerId);
+        containerSlider.setPointerCapture(event.pointerId);
 
         disableTransition();
     }
