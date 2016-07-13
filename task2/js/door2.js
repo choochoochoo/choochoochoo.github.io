@@ -36,6 +36,9 @@ function Door2(number, onUnlock) {
         }
 
         isGestureStarted = false;
+
+        centerPointEvent = null;
+        endPointEvent = null;
     }
 
 
@@ -48,7 +51,6 @@ function Door2(number, onUnlock) {
         // Первое касание
         if(!isGestureStarted){
             centerPointEvent = event;
-
             return;
         }
 
@@ -61,6 +63,9 @@ function Door2(number, onUnlock) {
             centerPointEvent.pageY,
             endPointEvent.pageX,
             endPointEvent.pageY);
+
+        console.log(centerPointEvent)
+        console.log(endPointEvent)
     }
 
     function _onCircle1PointerMove(event) {
