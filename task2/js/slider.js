@@ -17,7 +17,9 @@ function Slider(el, door) {
 
         currentPosition = startPosition = event.pageX;
         isGestureStarted = true;
-        
+
+        // убрал потому что в ie сразу при нажатии на кнопку конкретно
+        // сразу всплывает pointerleave
         //containerSlider.setPointerCapture(event.pointerId);
 
         disableTransition();

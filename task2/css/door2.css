@@ -9,11 +9,27 @@
     justify-content: space-around;
     flex-direction: column;
     position: relative;
+
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 .door-riddle__circle2 {
     height: 100px;
     width: 100px;
+    border-radius: 50px;
+    background-color: red;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+
+.door-riddle__circle3 {
+    height: 1px;
+    width: 1px;
     border-radius: 100px;
 
     background-color: white;
