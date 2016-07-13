@@ -1,10 +1,10 @@
-function Slider(el){
-    var container = el;
-    var slider = el.querySelector('.slider');
+function Slider(el, door) {
+    var containerSlider = el;
     var sliderButton = el.querySelector('.slider__button');
     var startPosition = 0;
     var currentPosition = 0;
     var isGestureStarted = false;
+    var doorOwner = door;
 
     sliderButton.addEventListener('pointerdown', onPointerDown);
     sliderButton.addEventListener('pointermove', onPointerMove);
@@ -15,10 +15,10 @@ function Slider(el){
 
     function onPointerDown(event) {
 
-        console.log(event.type);
-
         currentPosition = startPosition = event.pageX;
         isGestureStarted = true;
+
+        captureButton();
 
         sliderButton.setPointerCapture(event.pointerId);
 
@@ -36,8 +36,6 @@ function Slider(el){
 
     function onPointerUp(event) {
 
-        console.log(event.type);
-
         currentPosition = event.pageX;
         isGestureStarted = false;
 
@@ -46,32 +44,35 @@ function Slider(el){
         //}
 
         enableTransition();
-        resetPosition();
-        //
-        //if (currentPosition - startPosition < -50) {
-        //    hide();
-        //} else {
-        //    show();
-        //}
+
+        if (currentPosition - startPosition > 100 && isCaptureButton()) {
+            doorOwner.unlock();
+
+        } else {
+            resetPosition();
+        }
+
+        releaseButton();
     }
 
     function updatePosition() {
-
-        console.log(startPosition)
-        console.log(currentPosition)
-
-        requestAnimationFrame(function() {
-           // var diff = Math.max(startPosition, currentPosition - startPosition);
+        requestAnimationFrame(function () {
             var diff = currentPosition - startPosition;
 
-          //  console.log(diff)
+            if (diff < 0) {
+                diff = 0;
+            }
+
+            if (diff > 240) {
+                diff = 240;
+            }
 
             sliderButton.style.transform = 'translateX(' + diff + 'px)';
         });
     }
 
     function resetPosition() {
-        requestAnimationFrame(function() {
+        requestAnimationFrame(function () {
             sliderButton.style.transform = '';
         });
     }
@@ -83,4 +84,28 @@ function Slider(el){
     function enableTransition() {
         sliderButton.style.transition = '';
     }
+
+    function captureButton() {
+        sliderButton.classList.add('slider__button_captured');
+    }
+
+    function releaseButton() {
+        sliderButton.classList.remove('slider__button_captured');
+    }
+
+    function isCaptureButton() {
+        if(sliderButton.classList.contains('slider__button_captured')) {
+            return true;
+        }
+
+        return false;
+    }
+
+    this.show = function(){
+        containerSlider.classList.remove('slider_invisible');
+    };
+
+    this.hide = function(){
+        containerSlider.classList.add('slider_invisible');
+    };
 }
