@@ -9,6 +9,7 @@ function Door2(number, onUnlock) {
 
     var centerPointEvent = null;
     var endPointEvent = null;
+    var isFirstClick = false;
     var isGestureStarted = false;
     var thetaDelta = 0;
     var result = 0;
@@ -31,14 +32,11 @@ function Door2(number, onUnlock) {
     function _onCircle1PointerUp(event) {
         console.log(event.type)
 
-        if (isGestureStarted) {
-            resetResult();
-        }
-
         isGestureStarted = false;
-
+        isFirstClick = false;
         centerPointEvent = null;
         endPointEvent = null;
+        resetResult();
     }
 
 
@@ -49,15 +47,15 @@ function Door2(number, onUnlock) {
         //}
 
         // Первое касание
-        if(!isGestureStarted){
+        if(!isFirstClick){
             centerPointEvent = event;
-            isGestureStarted = true;
+            isFirstClick = true;
 
             console.log(centerPointEvent)
             return;
         }
 
-
+        isGestureStarted = true;
 
         endPointEvent = event;
 
@@ -106,7 +104,8 @@ function Door2(number, onUnlock) {
     }
 
     function resetResult(){
-        writeResult(0);
+        monitor.innerText = '';
+        result = 0;
     }
 
     function writeResult(result) {
