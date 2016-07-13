@@ -5,6 +5,7 @@
     <title>Dungeon of Doom</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/door1.css">
     <link rel="stylesheet" href="css/door2.css">
     <link rel="stylesheet" href="css/box.css">
     <link rel="stylesheet" href="css/slider.css">
@@ -48,65 +49,58 @@
                 <div class="popup__close">╳</div>
                 <div class="door1-riddle">
 
-                    <div class="slider">
-                        <div class="slider__button">
+                    <div class="door1-riddle__alarm"></div>
 
+                    <div class="door1-riddle__slider-wrap">
+                        <div class="slider slider_invisible">
+                            <div class="slider__button"></div>
                         </div>
                     </div>
 
-                    <!--<div class="door-riddle__alarm"></div>-->
-
-                    <!--<div class="door-riddle__wood-wrap">-->
-                    <!--<div class="door-riddle__wood">-->
-                    <!--<div class="door-riddle__wood-buttons-wrap door-riddle__wood-buttons-wrap_visible">-->
-                    <!--<div class="door-riddle__wood-button"></div>-->
-                    <!--<div class="door-riddle__wood-button-target"></div>-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <!--<div class="door-riddle__button door-riddle__button_0"></div>-->
-                    <!--<div class="door-riddle__button door-riddle__button_1"></div>-->
+                    <div class="door1-riddle__button door1-riddle__button_0 door1-riddle__button_pressed"></div>
+                    <div class="door1-riddle__button door1-riddle__button_1"></div>
                 </div>
             </div>
         </div>
 
-        <div class="popup popup_hidden popup_level_2" touch-action="none">
-            <!--<div class="popup popup_level_2" touch-action="none">-->
-            <div class="popup__content popup__content_level_2">
-                <div class="popup__close">╳</div>
+    </div>
 
-                <div class="door1-riddle">
+    <div class="popup popup_hidden popup_level_2" touch-action="none">
+        <!--<div class="popup popup_level_2" touch-action="none">-->
+        <div class="popup__content popup__content_level_2">
+            <div class="popup__close">╳</div>
 
-
-                    <div class="door-riddle__circle1 ">
-                        <!--<div class="door-riddle2__button door2-riddle__button_0"></div>-->
-                        <div class="door-riddle__circle2"></div>
-                        <!--<div class="door-riddle2__button door2-riddle__button_1"></div>-->
-                    </div>
+            <div class="door1-riddle">
 
 
-                </div>
-            </div>
-        </div>
-
-        <div class="popup popup_hidden popup_level_3" touch-action="none">
-            <!--<div class="popup popup_level_3" touch-action="none">-->
-            <div class="popup__content popup__content_level_3">
-                <div class="popup__close">╳</div>
-
-                <div class="box-riddle">
-                    <div class="box-riddle__ball box-riddle_ball_0 box-riddle__ball_active"></div>
-                    <div class="box-riddle__ball box-riddle_ball_1 box-riddle__ball_active"></div>
-                    <div class="box-riddle__ball box-riddle_ball_2 box-riddle__ball_active"></div>
-                    <div class="box-riddle__ball box-riddle_ball_3 box-riddle__ball_active"></div>
+                <div class="door-riddle__circle1 ">
+                    <!--<div class="door-riddle2__button door2-riddle__button_0"></div>-->
+                    <div class="door-riddle__circle2"></div>
+                    <!--<div class="door-riddle2__button door2-riddle__button_1"></div>-->
                 </div>
 
 
             </div>
         </div>
     </div>
+
+    <div class="popup popup_hidden popup_level_3" touch-action="none">
+        <!--<div class="popup popup_level_3" touch-action="none">-->
+        <div class="popup__content popup__content_level_3">
+            <div class="popup__close">╳</div>
+
+            <div class="box-riddle">
+                <div class="box-riddle__ball box-riddle_ball_0 box-riddle__ball_active"></div>
+                <div class="box-riddle__ball box-riddle_ball_1 box-riddle__ball_active"></div>
+                <div class="box-riddle__ball box-riddle_ball_2 box-riddle__ball_active"></div>
+                <div class="box-riddle__ball box-riddle_ball_3 box-riddle__ball_active"></div>
+            </div>
+
+
+        </div>
+    </div>
 </div>
+
 <script src="https://code.jquery.com/pep/0.4.1/pep.js"></script>
 <script src="js/slider.js"></script>
 <script src="js/doorBase.js"></script>
