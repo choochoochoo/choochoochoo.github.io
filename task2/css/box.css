@@ -38,7 +38,7 @@
     width: 64px;
     height: 64px;
     border-radius: 64px;
-    position: absolute;
+    position: relative;
     bottom: -100px;
 }
 
@@ -70,21 +70,26 @@
 
 .box-riddle__ball_1 {
     background-color: #17f32d;
-    left: 70px;
     animation-name: box-riddle-animation-ball-1;
     background-image: url(../img/safari.jpg);
 }
 
 .box-riddle__ball_2 {
     background-color: #f3e862;
-    left: 140px;
     animation-name: box-riddle-animation-ball-2;
     background-image: url(../img/firifox.jpg);
 }
 
 .box-riddle__ball_3 {
     background-color: #002cf3;
-    left: 210px;
     animation-name: box-riddle-animation-ball-3;
     background-image: url(../img/ie.png);
+}
+
+.box-riddle{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }
