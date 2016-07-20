@@ -31,7 +31,7 @@ app.Controls = function (player) {
 
     function clickPlayButtonHandler() {
 
-        this.player.showMainCanvas();
+
         
         this.player.timer.startTimer();
         this.player.startRenderScene();
@@ -45,6 +45,7 @@ app.Controls = function (player) {
         } else {
             this.player.elementVideo.play();
             this.player.elementVideoOld.play();
+            this.player.showMainCanvas();
         }
 
         this.player.audio.play();

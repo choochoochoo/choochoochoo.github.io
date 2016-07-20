@@ -1,6 +1,6 @@
 app.SubScene = function (player, canvas, context) {
 
-    var TIMEUPDATE_LATENCY = 0.5;
+    var TIMEUPDATE_LATENCY = 0.7;
 
     this.player = player;
 

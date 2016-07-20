@@ -95,6 +95,7 @@ app.Player = function () {
         this.canvas.classList.remove('old-school-player__canvas_hide');
     };
 
+    // оставил для примера рисования с помощью цпу
     function makeItSepia(pixelData) {
         for (var i = 0; i < pixelData.data.length; i += 4) {
             var r = pixelData.data[i];
