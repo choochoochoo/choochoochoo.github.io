@@ -1,0 +1,45 @@
+html {
+    font-family: 'Oranienbaum', serif;
+}
+
+body {
+    font-size: 16px;
+}
+
+.old-school-player__canvas_hide {
+    display: none;
+}
+
+.old-school-player__sources_hide {
+    display: none;
+}
+
+.old-school-player__button_hide {
+    display: none;
+}
+
+.old-school-player__screen {
+    top: 1rem;
+    position: relative;
+}
+
+.old-school-player__controls {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    font-size: 4rem;
+}
+
+.old-school-player__button {
+    background: transparent;
+    color: white;
+    border: 0;
+    font-size: 4rem;
+}
+
+.old-school-player {
+    display: flex;
+    justify-content: center;
+}
+
