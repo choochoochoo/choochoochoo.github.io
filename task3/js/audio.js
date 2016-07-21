@@ -39,6 +39,12 @@ app.Audio = function (player) {
         source.stop();
     };
 
+
+    this.restart = function () {
+        this.elementAudio.currentTime = 0;
+        this.elementAudioOld.currentTime = 0;
+    };
+
     this.play = function () {
         this.elementAudio.play();
         this.elementAudioOld.play();
