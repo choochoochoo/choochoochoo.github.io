@@ -14,6 +14,14 @@ app.Timer = function (player) {
         clearInterval(timerIntervalId);
     };
 
+    this.resetTimer = function(){
+        if(timerIntervalId){
+            clearInterval(timerIntervalId);
+        }
+        this.time = -1;
+        this.updateTimer();
+    };
+
     this.updateTimer = function () {
 
         var helper = new app.helper();
