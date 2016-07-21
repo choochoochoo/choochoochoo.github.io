@@ -19,75 +19,71 @@
 </head>
 <body onload="app.init()">
 
-    <div class="old-school-player">
+<div class="old-school-player">
 
-        <div class="old-school-player__sources old-school-player__sources_hide">
+    <div class="old-school-player__sources old-school-player__sources_hide">
 
-            <!--<video class="old-school-player__video"-->
-            <!--src="https://cache-default06e.cdn.yandex.net/kp.cdn.yandex.net/502838/kinopoisk.ru-Sherlock-284167.mp4"-->
-            <!--controls="true"/>-->
+        <video class="old-school-player__video"
+               src="resources/video/kinopoisk.ru-Sherlock-284167.mp4"
+               controls="true" width="500px">
+        </video>
 
-            <video class="old-school-player__video"
-                   src="resources/video/kinopoisk.ru-Sherlock-284167.mp4"
-                   controls="true" width="500px">
-            </video>
+        <video class="old-school-player__video-old"
+               src="resources/video/oldvideo.mp4"
+               controls="true" width="500px"
+               loop="loop">
+        </video>
 
-            <video class="old-school-player__video-old"
-                   src="resources/video/oldvideo.mp4"
-                   controls="true" width="500px"
-                   loop="loop">
-            </video>
+        <audio class="old-school-player__audio"
+               loop="loop"
+               src="resources/sound/The_Entertainer_-_1902_-_By_Scott_Joplin.ogg">
+        </audio>
 
-            <audio class="old-school-player__audio"
-                   loop="loop"
-                   src="resources/sound/The_Entertainer_-_1902_-_By_Scott_Joplin.ogg">
-            </audio>
-
-            <audio class="old-school-player__audio-old"
-                   loop="loop"
-                   src="resources/sound/oldPlayerSound.mp3">
-            </audio>
-
-
-
-        </div>
-
-
-
-        <div class="old-school-player__screen">
-
-            <canvas class="old-school-player__canvas-back"></canvas>
-
-            <canvas class="old-school-player__canvas old-school-player__canvas_hide"></canvas>
-
-            <div class="old-school-player__controls">
-                <button class="old-school-player__button old-school-player__button_play"
-                        title="play">
-                    <i class="fa fa-play" aria-hidden="true"></i>
-                </button>
-
-                <button class="old-school-player__button old-school-player__button_pause old-school-player__button_hide"
-                        title="pause">
-                    <i class="fa fa-pause" aria-hidden="true"></i>
-                </button>
-
-                <button class="old-school-player__button old-school-player__button_volume-on old-school-player__button_hide"
-                        title="volume on">
-                    <i class="fa fa-volume-off" aria-hidden="true"></i>
-                </button>
-
-                <button class="old-school-player__button old-school-player__button_volume-off"
-                        title="volume off">
-                    <i class="fa fa-volume-up" aria-hidden="true"></i>
-                </button>
-
-                <span class="old-school-player__timer">0:00</span>
-            </div>
-
-        </div>
-
+        <audio class="old-school-player__audio-old"
+               loop="loop"
+               src="resources/sound/oldPlayerSound.mp3">
+        </audio>
 
     </div>
+
+    <div class="old-school-player__screen">
+
+        <canvas class="old-school-player__canvas-back"></canvas>
+
+        <canvas class="old-school-player__canvas old-school-player__canvas_hide"></canvas>
+
+        <div class="old-school-player__controls">
+            <button class="old-school-player__button old-school-player__button_play"
+                    title="play">
+                <i class="fa fa-play" aria-hidden="true"></i>
+            </button>
+
+            <button class="old-school-player__button old-school-player__button_pause old-school-player__button_hide"
+                    title="pause">
+                <i class="fa fa-pause" aria-hidden="true"></i>
+            </button>
+
+            <button class="old-school-player__button old-school-player__button_repeat old-school-player__button_hide"
+                    title="repeat">
+                <i class="fa fa-repeat" aria-hidden="true"></i>
+            </button>
+
+            <button class="old-school-player__button old-school-player__button_volume-on old-school-player__button_hide"
+                    title="volume on">
+                <i class="fa fa-volume-off" aria-hidden="true"></i>
+            </button>
+
+            <button class="old-school-player__button old-school-player__button_volume-off"
+                    title="volume off">
+                <i class="fa fa-volume-up" aria-hidden="true"></i>
+            </button>
+
+            <span class="old-school-player__timer">0:00</span>
+        </div>
+
+    </div>
+
+</div>
 
 </body>
 </html>
