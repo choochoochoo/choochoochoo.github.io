@@ -64,6 +64,7 @@ app.Player = function () {
 
         function endedHandler() {
             this.controls.stop();
+            this.controls.showRepeatButton();
         }
 
         function paintPlayer(event) {
