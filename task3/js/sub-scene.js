@@ -116,14 +116,14 @@ app.SubScene = function (player, canvas, context) {
     };
 
     this.isSubscene = function () {
-        if(this.currentSub && !this.currentSub.isShowed){
+        if (this.currentSub && !this.currentSub.isShowed) {
             return true;
         }
 
         return false;
     };
 
-    this.isPlaying = function(){
+    this.isPlaying = function () {
         return !!this.startTime;
     };
 
@@ -146,13 +146,13 @@ app.SubScene = function (player, canvas, context) {
         clearTimeout(this.subSceneTimeoutId);
     };
 
-    this.pauseSubscene = function(){
+    this.pauseSubscene = function () {
         this.endTime = new Date();
         this.remainTime = this.getTimeCurrentSub() - (this.endTime - this.startTime);
         clearTimeout(this.subSceneTimeoutId);
     };
 
-    this.unPauseSubscene = function(){
+    this.unPauseSubscene = function () {
         this.startTime = new Date();
         this.subSceneTimeoutId = setTimeout(this.stopSubscene.bind(this), this.remainTime);
     };
@@ -173,6 +173,12 @@ app.SubScene = function (player, canvas, context) {
             var helper = new app.helper();
             this.subs = helper.parseSrt(content);
         }.bind(this), player.pathToSrt);
+    };
+
+    this.makeSubsNotShowed = function () {
+        this.subs.forEach(function (item) {
+            item.isShowed = false;
+        });
     };
 
     this.parseSubs();
