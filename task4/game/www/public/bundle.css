@@ -1,0 +1,479 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html, body {
+    min-height: 100%;
+}
+
+.body__app {
+    background:url(image/logo.png) no-repeat center top;
+    position:absolute;
+    left:50%;
+    top:50%;
+    height:50px;
+    width:225px;
+    text-align:center;
+    padding:180px 0px 0px 0px;
+    margin:-115px 0px 0px -112px;
+}
+.container {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+@media (min-width: 450px) {
+    .container {
+        box-shadow: 1px 1px 20px #666;
+    }
+}
+
+.level {
+    position: relative;
+    min-width: 320px;
+    background-size: cover;
+    background-position: left top;
+    background-repeat: no-repeat;
+}
+
+.level_0 {
+    background-image: url(image/level_0_bg.jpg);
+    height: 180px;
+    position: relative;
+}
+
+.level_0:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(image/logogame.png) no-repeat center 25px;
+    background-size: contain;
+    pointer-events: none;
+}
+
+.level_1 {
+    background-image: url(image/level_1_bg.png);
+    height: 235px;
+}
+
+.level_2 {
+    background-image: url(image/level_2_bg.png);
+    height: 235px;
+}
+
+.level_3 {
+    background-image: url(image/level_3_bg.png);
+    height: 235px;
+}
+
+.level_4 {
+    background-image: url(image/level_4_bg.png);
+    height: 75px;
+}
+
+.door {
+    position: absolute;
+    bottom: 0;
+    background: url(image/door.png) no-repeat top left;
+    width: 64px;
+    height: 100px;
+
+    cursor: pointer;
+}
+
+.door_locked {
+    background: url(image/door_locked.png) no-repeat top left;
+}
+
+.door_disabled {
+    opacity: .7;
+}
+
+.door_level_0 {
+    right: 2%;
+}
+
+.door_level_1 {
+    left: 2%;
+}
+
+.door_level_2 {
+    right: 2%;
+}
+
+.box {
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+
+    background: url(image/box.png) no-repeat top left;
+    width: 32px;
+    height: 32px;
+
+    cursor: pointer;
+}
+
+.popup {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    background-color: rgba(0,0,0,.3);
+    transition: opacity .3s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup_hidden {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.popup__content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+
+    background: #000 url(image/door_level_0.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.popup__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 24px;
+    color: #fff;
+
+    cursor: pointer;
+}
+
+.popup__content_level_0 {
+
+}
+
+.popup__content_level_1 {
+
+}
+
+.popup__content_level_2 {
+
+}
+.popup__content_level_3 {
+    background-image: url(image/yanja.jpg);
+    background-size: contain;
+}
+
+.door-riddle {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.door-riddle__button {
+    width: 64px;
+    height: 64px;
+    border-radius: 64px;
+    background-color: #583319;
+    border: 1px solid #F3E9E0;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .4);
+
+    transition: background-color .3s;
+}
+
+.door-riddle__button_pressed {
+    background-color: #F3E5D9;
+}@keyframes box-riddle-animation-ball-0 {
+    from {
+        bottom: -100px;
+    }
+    to {
+        bottom: 200px;
+    }
+}
+
+@keyframes box-riddle-animation-ball-1 {
+    from {
+        bottom: -150px;
+    }
+    to {
+        bottom: 300px;
+    }
+}
+
+@keyframes box-riddle-animation-ball-2 {
+    from {
+        bottom: -150px;
+    }
+    to {
+        bottom: 400px;
+    }
+}
+
+@keyframes box-riddle-animation-ball-3 {
+    from {
+        bottom: -250px;
+    }
+    to {
+        bottom: 300px;
+    }
+}
+
+.box-riddle__ball {
+    width: 64px;
+    height: 64px;
+    border-radius: 64px;
+    position: relative;
+    bottom: -100px;
+}
+
+.box-riddle__ball_active {
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.box-riddle__ball_killed {
+
+    -o-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+
+    -o-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+}
+
+.box-riddle__ball_0 {
+    background-color: #f30300;
+    animation-name: box-riddle-animation-ball-0;
+    background-image: url(image/chrome.jpg);
+}
+
+.box-riddle__ball_1 {
+    background-color: #17f32d;
+    animation-name: box-riddle-animation-ball-1;
+    background-image: url(image/safari.jpg);
+}
+
+.box-riddle__ball_2 {
+    background-color: #f3e862;
+    animation-name: box-riddle-animation-ball-2;
+    background-image: url(image/firifox.jpg);
+}
+
+.box-riddle__ball_3 {
+    background-color: #002cf3;
+    animation-name: box-riddle-animation-ball-3;
+    background-image: url(image/ie.png);
+}
+
+.box-riddle{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}.door1-riddle {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.door1-riddle__button {
+    width: 64px;
+    height: 64px;
+    border-radius: 64px;
+    background-color: #583319;
+    border: 1px solid #F3E9E0;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .4);
+
+    transition: background-color .3s;
+}
+
+.door1-riddle__button_pressed {
+    background-color: #F3E5D9;
+}
+
+.door1-riddle__alarm {
+    width: 64px;
+    height: 64px;
+    border-radius: 64px;
+    background-color: rgba(0, 0, 0, 255);
+    border: 1px solid #fff5ec;
+}
+
+@keyframes door1-riddle__alarm-animation {
+    from {
+        background-color: rgba(0, 0, 0, 255);
+        box-shadow: 0px 0px 0px 00px rgba(243, 3, 0, 0.65);
+    }
+    to {
+        background-color: #f30300;
+        box-shadow: 0px 0px 30px 30px rgba(243, 3, 0, 0.65);
+    }
+}
+
+.door1-riddle__alarm_active {
+
+    /* вызов анимации по имени */
+    animation-name: door1-riddle__alarm-animation;
+
+    /* параметр: продолжительность */
+    animation-duration: 0.75s;
+
+    /* параметр: количество итераций */
+    /* бесконечно: infinite */
+    animation-iteration-count: infinite;
+
+    /* параметр: анимаировать ли
+    в обратную сторону */
+    animation-direction: alternate;
+
+}
+
+.door1-riddle__slider-wrap{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.door2-riddle {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.door2-riddle__circle1 {
+    height: 300px;
+    width: 300px;
+    border-radius: 300px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+
+
+}
+
+.door2-riddle__button {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: white;
+    position: relative;
+
+}
+
+.door2-riddle__button_pressed{
+    background-color: red;
+    transition: background-color .3s;
+}
+
+.door2-riddle__circle3 {
+    height: 1px;
+    width: 1px;
+    position: relative;
+    background-color: black;
+}
+
+.door2-riddle__monitor{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    font-weight: bold;
+    font-size: 2rem;
+}.slider{
+    width: 300px;
+    height: 60px;
+    background-color: #fff;
+    border: 1px solid #000000;
+    border-radius: 60px;
+    position: relative;
+}
+
+.slider__button{
+    width: 46px;
+    height: 46px;
+    border-radius: 52px;
+    background-color: #000000;
+    top: 6px;
+    position: relative;
+    margin-left: 8px;
+
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.slider_invisible{
+    visibility: hidden;
+}
+/*# sourceMappingURL=bundle.css.map*/

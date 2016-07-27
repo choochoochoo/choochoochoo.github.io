@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"/>
+
+    <title>Dungeon of Doom</title>
+
+    <link rel="stylesheet" href="public/bundle.css">
+
+</head>
+
+<body>
+<div>
+
+    <div id="deviceready">
+        <div class="event received" style="display: none;">
+            <div class="app container">
+                <div class="level level_0">
+                    <div class="door door_locked door_level_0"></div>
+                </div>
+                <div class="level level_1">
+                    <div class="door door_locked door_disabled door_level_1"></div>
+                </div>
+                <div class="level level_2">
+                    <div class="door door_locked door_disabled door_level_2"></div>
+                </div>
+                <div class="level level_3">
+                    <div class="box door_locked door door_disabled door_level_3"></div>
+                </div>
+
+                <div class="popup popup_hidden popup_level_0">
+                    <div class="popup__content popup__content_level_0" touch-action="none">
+                        <div class="popup__close">╳</div>
+                        <div class="door-riddle">
+                            <div class="door-riddle__button door-riddle__button_0"></div>
+                            <div class="door-riddle__button door-riddle__button_1"></div>
+                            <div class="door-riddle__button door-riddle__button_2"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup popup_hidden popup_level_1">
+                    <div class="popup__content popup__content_level_1" touch-action="none">
+                        <div class="popup__close">╳</div>
+                        <div class="door1-riddle">
+
+                            <div class="door1-riddle__alarm"></div>
+
+                            <div class="door1-riddle__slider-wrap">
+                                <div class="slider slider_invisible">
+                                    <div class="slider__button"></div>
+                                </div>
+                            </div>
+
+                            <div class="door1-riddle__button door1-riddle__button_0"></div>
+                            <div class="door1-riddle__button door1-riddle__button_1"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="popup popup_hidden popup_level_2" touch-action="none">
+                    <div class="popup__content popup__content_level_2">
+                        <div class="popup__close">╳</div>
+
+                        <div class="door2-riddle">
+
+                            <div class="door2-riddle__monitor"></div>
+
+                            <div class="door2-riddle__circle1 ">
+                                <div class="door2-riddle__button">
+                                    <!--<div class="door2-riddle__circle3"></div>-->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup popup_hidden popup_level_3" touch-action="none">
+                    <div class="popup__content popup__content_level_3">
+                        <div class="popup__close">╳</div>
+
+                        <div class="box-riddle">
+                            <div class="box-riddle__ball box-riddle__ball_0 box-riddle__ball_active"></div>
+                            <div class="box-riddle__ball box-riddle__ball_1 box-riddle__ball_active"></div>
+                            <div class="box-riddle__ball box-riddle__ball_2 box-riddle__ball_active"></div>
+                            <div class="box-riddle__ball box-riddle__ball_3 box-riddle__ball_active"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="cordova.js"></script>
+
+<script type="text/javascript" src="public/bundle.js"></script>
+
+<script type="text/javascript">
+    window.app.initialize();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+.slider{
+    width: 300px;
+    height: 60px;
+    background-color: #fff;
+    border: 1px solid #000000;
+    border-radius: 60px;
+    position: relative;
+}
+
+.slider__button{
+    width: 46px;
+    height: 46px;
+    border-radius: 52px;
+    background-color: #000000;
+    top: 6px;
+    position: relative;
+    margin-left: 8px;
+
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.slider_invisible{
+    visibility: hidden;
+}

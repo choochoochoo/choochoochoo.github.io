@@ -1,0 +1,95 @@
+@keyframes box-riddle-animation-ball-0 {
+    from {
+        bottom: -100px;
+    }
+    to {
+        bottom: 200px;
+    }
+}
+
+@keyframes box-riddle-animation-ball-1 {
+    from {
+        bottom: -150px;
+    }
+    to {
+        bottom: 300px;
+    }
+}
+
+@keyframes box-riddle-animation-ball-2 {
+    from {
+        bottom: -150px;
+    }
+    to {
+        bottom: 400px;
+    }
+}
+
+@keyframes box-riddle-animation-ball-3 {
+    from {
+        bottom: -250px;
+    }
+    to {
+        bottom: 300px;
+    }
+}
+
+.box-riddle__ball {
+    width: 64px;
+    height: 64px;
+    border-radius: 64px;
+    position: relative;
+    bottom: -100px;
+}
+
+.box-riddle__ball_active {
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.box-riddle__ball_killed {
+
+    -o-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+
+    -o-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+}
+
+.box-riddle__ball_0 {
+    background-color: #f30300;
+    animation-name: box-riddle-animation-ball-0;
+    background-image: url(../img/chrome.jpg);
+}
+
+.box-riddle__ball_1 {
+    background-color: #17f32d;
+    animation-name: box-riddle-animation-ball-1;
+    background-image: url(../img/safari.jpg);
+}
+
+.box-riddle__ball_2 {
+    background-color: #f3e862;
+    animation-name: box-riddle-animation-ball-2;
+    background-image: url(../img/firifox.jpg);
+}
+
+.box-riddle__ball_3 {
+    background-color: #002cf3;
+    animation-name: box-riddle-animation-ball-3;
+    background-image: url(../img/ie.png);
+}
+
+.box-riddle{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
