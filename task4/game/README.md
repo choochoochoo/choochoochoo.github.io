@@ -1,69 +1,56 @@
-# Hello World PhoneGap Template [![bitHound Score][bithound-img]][bithound-url]
+# Keyboardapp
 
-A PhoneGap Hello World template
+- В приложение завернута игра
 
-## Usage
+- В первой двери нужно нажать три кнопки
+- Во второй нужно нажать две кнопки и двинуть появившийся слайдер
+- В третьей нужно нажать на центральную кнопку и прокрутить по часовой стрелке
+- В последней нужно двойным тапом нажать по всем шарикам.
 
-#### PhoneGap CLI
+# splashicon-generator
+- Картинки собирал утилитой https://www.npmjs.com/package/splashicon-generator
+(на windows она не заработало выдает в консоль артефакты ваще не понятно что не работает)
+- Проблемы с ней есть для windows не все корректно создает картинки
+- А для андройд названия не такие какие по умолчанию (можно конечно настроить, но из коробки не подходит сразу
 
-The hello-world template is the default when you create a new application using the [phonegap-cli][phonegap-cli-url].
+## Проблемы (на самом деле их было оч много)
 
-    phonegap create my-app
+### Настоящий телефон
 
-Create an app using this template specifically:
+- На windows phone открывается сгенерированный проект только в visual studio 13 (работаю я в 15 обычно).
+- Билд сделанный на https://build.phonegap.com/ для windows phone не работает, хотя ошибок в логах нет.
+- Деплой порадовал на телефон по usb, работает сразу, без проблем.
 
-    phonegap create my-app --template hello-world
+### Эмулятор android ( о да здесь было проблем оч много, виртуалку я поднимал на windows 8 и 10)
 
-To see a list of other available PhoneGap templates:
+#### На рабочем компе
 
-    phonegap template list
+-  не заработали виртуалки вообще (нет поддержки виртуализации)
+--
 
-## [config.xml][config-xml]
+#### На домашнем
 
-#### android-minSdkVersion (Android only)
+- Нужно было включить виртуализацию в bios
+- У меня были в пути к проекту русские символы phonegap не хотел работать с этим
+- На windows нужно ставить отдельно эмулятор помимо android studio (например через AVD manager)
+- Если после добовления платформы android в проект, открыть его через android studio он ломает его,
+( перезаписывает пути к другим версия нескольких dll )
+- Нужно было обновить sdk manager некоторые библиотеки (например build skd 24.0.1 не стояло сразу)
+- После этого еще и java sdk нужно было обновить
+- После установки android sdk и java sdk переменные окружение сами не записались, нужно было сделать вручную
+- В папке www лежали скрипты из которых я собирал bundle, из за них не билдился проект, долго мучался, собирал через --debug
+и ничего не выводилось адекватного, потом просто вынес из www и заработало (ошибка была что то вроде debugrescource)
+- Самая главная проблема над которой я долго просидел это эмулятор и версия андройд для него не хотела работать
+при запуске эмулятора приложение не открывалось, и не устанавливалось и в консоль писалось (если ввести --verbose) вот это
+Running command "getprop emu.uuid" on emulator-5554...
+интересно что один раз отработало, а потом вообще ни в какую.
+Решил проблему установкой другого эмулятора и другой версии android.
 
-Minimum SDK version supported on the target device. Maximum version is blank by default.
+## Дополнительно
 
-This template sets the minimum to `14`.
+- Впервые попробовал webpack (собрать и js и css) + babel
+- Проверил на виртуалке android
+- Проверил на windows phone
+- В каталоге screencast скриншоты
+- Не успел ничего сделать на фреймворках (но я в реальной работе исползовал extjs (оч много), angular, bootstrap, jquery, kendo ui
 
-    <preference name="android-minSdkVersion" value="14" />
-
-#### &lt;access ...&gt; (All)
-
-This template defaults to wide open access.
-
-    <access origin="*" />
-
-It is strongly encouraged that you restrict access to external resources in your application before releasing to production.
-
-For more information on whitelist configuration, see the [Cordova Whitelist Guide][cordova-whitelist-guide] and the [Cordova Whitelist Plugin documentation][cordova-plugin-whitelist]
-
-## [www/index.html][index-html]
-
-#### Content Security Policy (CSP)
-
-The default CSP is similarly open:
-
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-
-Much like the access tag above, you are strongly encouraged to use a more restrictive CSP in production.
-
-A good starting point declaration might be:
-
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" />
-
-For more information on the Content Security Policy, see the [section on CSP in the Cordova Whitelist Plugin documentation][cordova-plugin-whitelist-csp].
-
-Another good resource for generating a good CSP declaration is [CSP is Awesome][csp-is-awesome]
-
-
-[phonegap-cli-url]: http://github.com/phonegap/phonegap-cli
-[cordova-app]: http://github.com/apache/cordova-app-hello-world
-[bithound-img]: https://www.bithound.io/github/phonegap/phonegap-app-hello-world/badges/score.svg
-[bithound-url]: https://www.bithound.io/github/phonegap/phonegap-app-hello-world
-[config-xml]: https://github.com/phonegap/phonegap-template-hello-world/blob/master/config.xml
-[index-html]: https://github.com/phonegap/phonegap-template-hello-world/blob/master/www/index.html
-[cordova-whitelist-guide]: https://cordova.apache.org/docs/en/dev/guide/appdev/whitelist/index.html
-[cordova-plugin-whitelist]: http://cordova.apache.org/docs/en/latest/reference/cordova-plugin-whitelist
-[cordova-plugin-whitelist-csp]: http://cordova.apache.org/docs/en/latest/reference/cordova-plugin-whitelist#content-security-policy
-[csp-is-awesome]: http://cspisawesome.com
