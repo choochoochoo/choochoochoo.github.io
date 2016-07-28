@@ -1574,11 +1574,6 @@
 	
 	    window.onerror = function () {
 	        // здесь можно залогировать и выйти
-	
-	        // Попробуем выйти
-	        if (navigator.app.exitApp) {
-	            navigator.app.exitApp();
-	        }
 	    };
 	}
 
