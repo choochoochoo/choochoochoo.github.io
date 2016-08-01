@@ -1,0 +1,331 @@
+/* ../../desktop.blocks/page/page.styl:begin */
+.page {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  min-width: 300px;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .page {
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 800px) {
+  .page {
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+  }
+}
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+  .page {
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .page {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+/* ../../desktop.blocks/page/page.styl:end */
+/* ../../desktop.blocks/article/article.styl:begin */
+/* ../../desktop.blocks/article/article.styl:end */
+/* ../../desktop.blocks/section/section.styl:begin */
+/* ../../desktop.blocks/section/section.styl:end */
+/* ../../libs/bem-components/common.blocks/link/link.css:begin */
+.link {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+/* ../../libs/bem-components/common.blocks/link/link.css:end */
+/* ../../desktop.blocks/section/__header/section__header.styl:begin */
+.section__header {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: initial;
+  height: 80vh;
+  margin-bottom: 8vh;
+  color: #fff;
+}
+@media screen and (min-width: 1025px) {
+  .section__header {
+    background-attachment: fixed;
+  }
+}
+/* ../../desktop.blocks/section/__header/section__header.styl:end */
+/* ../../desktop.blocks/section/__layout/section__layout.styl:begin */
+.section__layout {
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(0,0,0,0.28);
+}
+/* ../../desktop.blocks/section/__layout/section__layout.styl:end */
+/* ../../desktop.blocks/section/__top-row/section__top-row.styl:begin */
+.section__top-row {
+  display: table-row;
+  vertical-align: middle;
+  height: 80%;
+}
+/* ../../desktop.blocks/section/__top-row/section__top-row.styl:end */
+/* ../../desktop.blocks/section/__vcenter/section__vcenter.styl:begin */
+.section__vcenter {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* ../../desktop.blocks/section/__vcenter/section__vcenter.styl:end */
+/* ../../desktop.blocks/section/__title/section__title.styl:begin */
+.section__title {
+  letter-spacing: 0.5rem;
+  font-weight: initial;
+  margin: 0;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .section__title {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 800px) {
+  .section__title {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+}
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+  .section__title {
+    font-size: 6rem;
+    line-height: 6rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .section__title {
+    font-size: 7rem;
+    line-height: 7rem;
+  }
+}
+/* ../../desktop.blocks/section/__title/section__title.styl:end */
+/* ../../desktop.blocks/section/__subtitle/section__subtitle.styl:begin */
+.section__subtitle {
+  letter-spacing: 0.5rem;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .section__subtitle {
+    font-size: 0.7rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 800px) {
+  .section__subtitle {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+  .section__subtitle {
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .section__subtitle {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+}
+/* ../../desktop.blocks/section/__subtitle/section__subtitle.styl:end */
+/* ../../desktop.blocks/section/__bottom-row/section__bottom-row.styl:begin */
+.section__bottom-row {
+  display: table-row;
+  vertical-align: middle;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .section__bottom-row {
+    font-size: 0.7rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 800px) {
+  .section__bottom-row {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+}
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+  .section__bottom-row {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .section__bottom-row {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+/* ../../desktop.blocks/section/__bottom-row/section__bottom-row.styl:end */
+/* ../../desktop.blocks/section/__subscription1/section__subscription1.styl:begin */
+/* ../../desktop.blocks/section/__subscription1/section__subscription1.styl:end */
+/* ../../desktop.blocks/link/_theme/link_theme_faroe.styl:begin */
+.link_theme_faroe {
+  color: #fff;
+}
+/* ../../desktop.blocks/link/_theme/link_theme_faroe.styl:end */
+/* ../../desktop.blocks/section/__subscription2/section__subscription2.styl:begin */
+/* ../../desktop.blocks/section/__subscription2/section__subscription2.styl:end */
+/* ../../desktop.blocks/section/__main/section__main.styl:begin */
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .section__main {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 800px) {
+  .section__main {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+  .section__main {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .section__main {
+    max-width: 1200px;
+    margin: 0 auto !important;
+    position: relative;
+  }
+}
+/* ../../desktop.blocks/section/__main/section__main.styl:end */
+/* ../../desktop.blocks/section/__layout-text/section__layout-text.styl:begin */
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+  .section__layout-text {
+    width: 100%;
+    margin: 5% auto;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .section__layout-text {
+    width: 55%;
+    max-width: 730px;
+    margin-left: 40px;
+    margin-right: 10%;
+  }
+}
+/* ../../desktop.blocks/section/__layout-text/section__layout-text.styl:end */
+/* ../../desktop.blocks/section/__quote/section__quote.styl:begin */
+.section__quote {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5vh;
+  border-left: 5px solid #f9f0f0;
+  margin: 0 auto;
+  margin-top: 5vh;
+  max-width: 470px;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .section__quote {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+  .section__quote {
+    float: none;
+    clear: none;
+    position: static;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .section__quote {
+    text-align: justify;
+    width: 35%;
+    margin: 0 auto;
+    float: right;
+    clear: both;
+    position: absolute;
+    right: 0px;
+  }
+}
+/* ../../desktop.blocks/section/__quote/section__quote.styl:end */
+/* ../../desktop.blocks/section/__quote/_important/section__quote_important.styl:begin */
+.section__quote_important {
+  border-left: 5px solid #e2e2e2;
+  font-weight: bold;
+}
+/* ../../desktop.blocks/section/__quote/_important/section__quote_important.styl:end */
+/* ../../desktop.blocks/section/__quote-content/section__quote-content.styl:begin */
+.section__quote-content {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+/* ../../desktop.blocks/section/__quote-content/section__quote-content.styl:end */
+/* ../../desktop.blocks/section/__paragraph/section__paragraph.styl:begin */
+.section__paragraph {
+  text-align: justify;
+  margin: 0;
+}
+/* ../../desktop.blocks/section/__paragraph/section__paragraph.styl:end */
+/* ../../desktop.blocks/section/__paragraph/_offset/section__paragraph_offset.styl:begin */
+.section__paragraph_offset {
+  margin-top: 5vh;
+}
+/* ../../desktop.blocks/section/__paragraph/_offset/section__paragraph_offset.styl:end */
+/* ../../desktop.blocks/section/__dropcap/section__dropcap.styl:begin */
+.section__dropcap {
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 0;
+}
+/* ../../desktop.blocks/section/__dropcap/section__dropcap.styl:end */
+/* ../../desktop.blocks/section/__quote/_bottom/section__quote_bottom.styl:begin */
+.section__quote_bottom {
+  bottom: 0px;
+}
+/* ../../desktop.blocks/section/__quote/_bottom/section__quote_bottom.styl:end */
+/* ../../desktop.blocks/section/_offset/section_offset.styl:begin */
+.section_offset {
+  margin-top: 10vh;
+}
+/* ../../desktop.blocks/section/_offset/section_offset.styl:end */
+/* ../../desktop.blocks/section/__header/_picture/section__header_picture_flight-road.styl:begin */
+.section__header_picture_flight-road {
+  background-image: url("/resources/images/section-2-flight-and-road.jpeg");
+}
+/* ../../desktop.blocks/section/__header/_picture/section__header_picture_flight-road.styl:end */
+/* ../../desktop.blocks/section/__header/_picture/section__header_picture_weather.styl:begin */
+.section__header_picture_weather {
+  background-image: url("/resources/images/section-3-weather.jpeg");
+}
+/* ../../desktop.blocks/section/__header/_picture/section__header_picture_weather.styl:end */
+/* ../../desktop.blocks/section/__header/_picture/section__header_picture_faroe.styl:begin */
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .section__header_picture_faroe {
+    background-image: url("/resources/images/section-1-faroe-mobile-700.jpeg");
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 800px) {
+  .section__header_picture_faroe {
+    background-image: url("/resources/images/section-1-faroe-pad-1000.jpeg");
+  }
+}
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+  .section__header_picture_faroe {
+    background-image: url("/resources/images/section-1-faroe-pad-1000.jpeg");
+  }
+}
+@media screen and (min-width: 1025px) {
+  .section__header_picture_faroe {
+    background-image: url("/resources/images/section-1-faroe-1680.jpeg");
+  }
+}
+/* ../../desktop.blocks/section/__header/_picture/section__header_picture_faroe.styl:end */
