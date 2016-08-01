@@ -299,33 +299,33 @@
 /* ../../desktop.blocks/section/_offset/section_offset.styl:end */
 /* ../../desktop.blocks/section/__header/_picture/section__header_picture_flight-road.styl:begin */
 .section__header_picture_flight-road {
-  background-image: url("/resources/images/section-2-flight-and-road.jpeg");
+  background-image: url("/faroe/resources/images/section-2-flight-and-road.jpeg");
 }
 /* ../../desktop.blocks/section/__header/_picture/section__header_picture_flight-road.styl:end */
 /* ../../desktop.blocks/section/__header/_picture/section__header_picture_weather.styl:begin */
 .section__header_picture_weather {
-  background-image: url("/resources/images/section-3-weather.jpeg");
+  background-image: url("/faroe/resources/images/section-3-weather.jpeg");
 }
 /* ../../desktop.blocks/section/__header/_picture/section__header_picture_weather.styl:end */
 /* ../../desktop.blocks/section/__header/_picture/section__header_picture_faroe.styl:begin */
 @media screen and (min-width: 0px) and (max-width: 480px) {
   .section__header_picture_faroe {
-    background-image: url("/resources/images/section-1-faroe-mobile-700.jpeg");
+    background-image: url("/faroe/resources/images/section-1-faroe-mobile-700.jpeg");
   }
 }
 @media screen and (min-width: 481px) and (max-width: 800px) {
   .section__header_picture_faroe {
-    background-image: url("/resources/images/section-1-faroe-pad-1000.jpeg");
+    background-image: url("/faroe/resources/images/section-1-faroe-pad-1000.jpeg");
   }
 }
 @media screen and (min-width: 801px) and (max-width: 1024px) {
   .section__header_picture_faroe {
-    background-image: url("/resources/images/section-1-faroe-pad-1000.jpeg");
+    background-image: url("/faroe/resources/images/section-1-faroe-pad-1000.jpeg");
   }
 }
 @media screen and (min-width: 1025px) {
   .section__header_picture_faroe {
-    background-image: url("/resources/images/section-1-faroe-1680.jpeg");
+    background-image: url("/faroe/resources/images/section-1-faroe-1680.jpeg");
   }
 }
 /* ../../desktop.blocks/section/__header/_picture/section__header_picture_faroe.styl:end */
