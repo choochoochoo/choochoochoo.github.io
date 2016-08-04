@@ -19,7 +19,7 @@ Load: 11.52
   * Адаптивности нет, использовать разные картинки для разных размеров экранов, а еще лучше резать на сервере в зависимости от размера экрана клиентского устройства) - _ожидание ответа, декодирование_
   * Сделать из svg иконок, иконочный шрифт - _уменьшим количество запросов_
   [пример 1](https://lifehacker.ru/wp-content/themes/lifehacker/static/img/category-icons/sport.svg), [пример 2](https://lifehacker.ru/wp-content/themes/lifehacker/static/img/category-icons/food.svg)
-  * Слишком большие картинки очень медленно рисуются, видно, как проседает fps на графике ![Скриншот 1](./img/img1.png) - _рендеринг_
+  * Слишком большие картинки очень медленно рисуются, видно, как проседает fps на графике - _рендеринг_  ![Скриншот 1](./img/img1.png)
   * Запросы непонятного вида (может это маяк, старый вид опросы сервера), в общем надо разобраться и может их убрать - _уменьшим количество запросов [пример](https://sync.teads.tv/um?eid=45&uid=0a4f554edfecb137df67fc59035abebf)_
   
   > PS: сайт адаптивный, но на телефоне он у меня так и не заработал, первый раз картинки не загружались второй раз был, просто белый экран
@@ -51,7 +51,7 @@ Load: 11.52
 5. XHR и другие
 
   Запросов: около 80  
-  Например https://lifehacker.ru/pocket/?url=https%3A%2F%2Flifehacker.ru%2F2016%2F07%2F14%2Fpokemon-go-tips-and-tricks%2F
+  [Пример](https://lifehacker.ru/pocket/?url=https%3A%2F%2Flifehacker.ru%2F2016%2F07%2F14%2Fpokemon-go-tips-and-tricks%2F)
   
   * Если часть не нужна - _уменьшим количество запросов_
 
@@ -59,7 +59,7 @@ Load: 11.52
 
 7. Кэшировать на более длинное время файла( касается бандлов css, js) - _уменьшим количество запросов_
 
-  Например: https://lifehacker.ru/wp-content/plugins/lh-social-slider/assets/css/style.css?ver=1.10
+  [Пример](https://lifehacker.ru/wp-content/plugins/lh-social-slider/assets/css/style.css?ver=1.10)
   - Cache-Control: max-age=86400
   - Date: Thu, 04 Aug 2016 07:26:07 GMT
   - Expires: Fri, 05 Aug 2016 07:26:07 GMT
@@ -77,4 +77,5 @@ Load: 11.52
     ![Скриншот 1](./img/img3.png) 
   - Судя по этому графику есть утечки памяти
     ![Скриншот 1](./img/img4.png)  
+
   > После каждой сборки увеличивается на 100 KB количество памяти
