@@ -47,4 +47,5 @@ Load: 3.72
   - http://www.googletagmanager.com/gtm.js?id=GTM-W8D9KM
   
 7. Оптимизировать выполнения скриптов и рендеринг
+
     ![Скриншот 1](./img/img5.png)  
